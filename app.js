@@ -6,8 +6,8 @@ let ul = document.querySelector("#weather_list");
 
 btn.addEventListener("click", async () => {
   let city = City.value.trim();
-  const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
-  const forecastURL = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}`;
+  const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`;
+  const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIkey}`;
   let forecast = await getWeather(forecastURL);
   let data = await getWeather(weatherURL);
   show(data, forecast);
